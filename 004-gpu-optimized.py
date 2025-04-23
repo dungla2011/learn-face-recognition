@@ -1,4 +1,5 @@
-# LAD: video 11s, YOLO cpu : 14s, YOLO gpu: 5s
+# LAD: video 11s, YOLO cpu : 14s, YOLO gpu: 3-5s
+# Nếu remove torch thì tự dùng CPU
 
 import cv2
 import json
@@ -22,8 +23,8 @@ DISPLAY_WIDTH = 960  # Half HD width
 DISPLAY_HEIGHT = 540  # Half HD height
 
 # GPU optimization settings
-BATCH_SIZE = 16  # Xử lý nhiều frame cùng lúc
-PREFETCH_SIZE = 32  # Số frame đọc trước và xếp hàng đợi
+BATCH_SIZE = 32  # Xử lý nhiều frame cùng lúc
+PREFETCH_SIZE = 64  # Số frame đọc trước và xếp hàng đợi
 NMS_CONF_THRESHOLD = 0.25  # Non-max suppression confidence threshold
 NMS_IOU_THRESHOLD = 0.45  # Non-max suppression IoU threshold
 DISPLAY_OUTPUT = True  # Hiển thị frame output (tắt để tăng tốc)
