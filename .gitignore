@@ -1,6 +1,8 @@
 __pycache__/
 venv/
 saved_images/
+face_embeddings/
+face_images/
 .env
 .DS_Store
 *.log
